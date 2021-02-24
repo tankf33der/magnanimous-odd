@@ -16,5 +16,8 @@
 (test T (ismagna "97393713331910"))
 (test NIL (ismagna "97393713331913"))
 
+(setq NDigits 5)
+(test T (ismagna "11116"))
+
 (msg 'ok)
 (bye)

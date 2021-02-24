@@ -1,41 +1,31 @@
+(load "ismagna.l")
 # generator for numbers: all odds + last even.
 
-# range is 110 - 9998
-# stored in reverse, LSB is CAR
-(setq Lst (0 1 1 0))
+(setq
+   *N10 (mpz_create)
+   *N   (mpz_create)
+   *Q   (mpz_create)
+   *R   (mpz_create)
+   *D   (mpz_create) ) 
+(mpz_init_set_ui *N10 10)
+(mpz_init *N)
+(mpz_init *Q)
+(mpz_init *R)
+(mpz_init *D)
 
-(zero C)
-(for N (range 111 999)
-   (let L (mapcar format (chop (format N)))
-      # (println 'L L)
-      (when (fully '((N) (bit? 1 N)) L)
-         (inc 'C) ) ) )
-(println 'C C)
-
-(setq N (length 9998))
-(println (dec (sum '((N) (** 5 N)) (range 4 N))))
-
-(zero C)
-(bench
-(let Lst (need 11 1)
+(let Lst (need 15 1)
+   (setq NDigits (inc (length Lst)))
    (do (** 5 (length Lst))
       (let X 0
          (do 5
-            # number ready is here
-            (println (pack Lst X))
-            (inc 'X 2)
-            # (wait 1000)
-         )
-      )
+            # === number ready is here
+            (and (ismagna (pack Lst X)) (println (pack Lst X)))
+            # ====
+            (inc 'X 2) ) )
       (for (L Lst L (cdr L))
          (inc L)(inc L)
          (T (>= 9 (car L)))
-         (set L 1) )
-      # Lst is ready
-   )
-)
-)
-(println 'C C)
+         (set L 1) ) ) )
 
 
 (msg 'ok)

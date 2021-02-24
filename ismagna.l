@@ -11,4 +11,3 @@
       (mpz_add *Q *Q *R)
       (T (=0 (mpz_probab_prime_p *Q 16)))
       (t (mpz_mul *D *D *N10)) ) )
-
