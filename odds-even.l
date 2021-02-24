@@ -8,10 +8,6 @@
    *R   (mpz_create)
    *D   (mpz_create) ) 
 (mpz_init_set_ui *N10 10)
-(mpz_init *N)
-(mpz_init *Q)
-(mpz_init *R)
-(mpz_init *D)
 
 (let Lst (need 15 1)
    (setq NDigits (inc (length Lst)))
@@ -26,7 +22,5 @@
          (inc L)(inc L)
          (T (>= 9 (car L)))
          (set L 1) ) ) )
-
-
 (msg 'ok)
 (bye)
