@@ -1,3 +1,7 @@
+# original repo:
+# https://git.envs.net/mpech/mpz_pil
+
+
 # TYPES:
 # mpz_t = 16
 # mp_bitcnt_t = unsigned long int
