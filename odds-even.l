@@ -19,13 +19,19 @@
 (bench
 (let Lst (need 11 1)
    (do (** 5 (length Lst))
-      # (println (format Lst))
+      (let X 0
+         (do 5
+            # number ready is here
+            (println (pack Lst X))
+            (inc 'X 2)
+            # (wait 1000)
+         )
+      )
       (for (L Lst L (cdr L))
          (inc L)(inc L)
          (T (>= 9 (car L)))
          (set L 1) )
-      (when (full '((N) (bit? 1 N)) Lst)
-         (inc 'C ) )
+      # Lst is ready
    )
 )
 )
