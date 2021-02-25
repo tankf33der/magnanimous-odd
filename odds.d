@@ -3,12 +3,18 @@ import std.bigint;
 import std.math;
 
 void main() {
-	ubyte[3] a = [1,1,0];
+	ubyte[15] a;
 	byte NDigits = a.length;
+
+	for(int i = 0; a.length-2 > i; i++) {
+		a[i] = 1;
+	}
 
 	auto E = pow(5, NDigits);
 	for(int i = 0; E > i; i++) {
-		writeln(a);
+		// number is here
+		// writeln(a);
+		// ====
 		a[$-1] += 2;
 		if (a[$-1] <= 8) {
 			continue;
