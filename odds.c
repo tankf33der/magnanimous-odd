@@ -44,8 +44,8 @@ int ismagna(const char* s) {
 
 int main(void) {
 	// XXX fun starts here
-	char a[13];
-	char s[14];	// a+1
+	char a[15];
+	char s[16];	// a+1
 	// ===
 	
 	a$ = sizeof(a);
@@ -56,7 +56,7 @@ int main(void) {
 	s[a$] = 0;
 
 	// XXX (** 5 a$), max 27
-	for(unsigned long i = 0; 1220703125 > i; i++) {
+	for(unsigned long i = 0; 30517578125 > i; i++) {
 		push(s, a);
 		// XXX, s is ready
 		// printf("%s, %d\n", s, ismagna(s));
